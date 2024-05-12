@@ -1,5 +1,15 @@
 ---
+// Layouts
+import FirstSection from "../layouts/FirstSection.astro";
 
+// global css 
+import '../styles/global.css';
+
+// css colors 
+const WhiteColor = '#FAF9F6';
+const BlackColor = '#000';
+const YellowColor = '#E6C03B';
+const GreyColor = '#8E8E8E';
 ---
 
 <html lang="en">
@@ -9,8 +19,13 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Prolific Cuts - Ayia Napa</title>
+		<style define:vars={{ WhiteColor, BlackColor, YellowColor, GreyColor }}>
+		body {
+			background-color: var(--BlackColor);
+		}
+		</style>
 	</head>
 	<body>
-		<h1>Prolific Cuts</h1>
+		<FirstSection>
 	</body>
 </html>
