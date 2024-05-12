@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 import { Image } from "astro:assets";
+import Giannis from '../assets/Snapinsta.app_299881807_5583105468418179_2259857107602726306_n_1080.jpg';
+import Theo from '../assets/Snapinsta.app_403180001_1588485728557671_4394938086799228517_n_1080.jpg';
+
 
 // css colors
 const WhiteColor = "#FAF9F6";
@@ -33,11 +36,48 @@ const GreyColor = "#8E8E8E";
     margin-left: 1rem;
     color: var(--GreyColor);
   }
+
+  /* Scrolling section */
+  .main-scrolling__section {
+    position: relative;
+    scrollbar-width: 0px;
+    --gallery-side-padding: calc(50vw - min(1680px, var(--global-viewport-content-responsive))/2);
+  }
+
+  .main-scrolling__section ul {
+    list-style-type: none;
+  }
+
+  img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .scroll__container {
+    overflow: scroll;
+  }
+
+  .item__container {
+    display: flex;
+    width: fit-content;
+  }
 </style>
 
 <section class="second__section">
   <div class="second__section-heading">
     <h1>INTRODUCING Our Premier Barber Crew</h1>
     <h3>Prolific Cuts Crew</h3>
+  </div>
+
+  <div class="main-scrolling__section">
+    <div class="scroll__container">
+      <div class="item__container">
+        <ul>
+          <li><Image src={Giannis} alt="giannis koliandris"></li>
+          <li><Image src={Theo} alt="theo kattakas"></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
