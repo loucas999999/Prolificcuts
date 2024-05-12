@@ -18,9 +18,11 @@ const GreyColor = "#8E8E8E";
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
 
   header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    z-index: 999;
   }
 
   svg {
@@ -33,11 +35,12 @@ const GreyColor = "#8E8E8E";
   }
 
   .first__section {
+    position: relative;
     height: 60vh;
     background: rgb(52, 52, 52);
     background: linear-gradient(
       180deg,
-      rgba(52, 52, 52, 1) 0%,
+      rgb(80, 80, 80) 0%,
       rgba(0, 0, 0, 1) 100%
     );
     /* background-image: url(/public/pexels-gabriel-lorca-691086892-17981965.jpg);
@@ -45,10 +48,22 @@ const GreyColor = "#8E8E8E";
     background-size: cover; */
   }
 
+  .test {
+    position: absolute;
+    height: 30rem;
+    max-width: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
   .main__heading {
+    position: relative;
     height: 100%;
     display: flex;
     align-items: center;
+    z-index: 999;
   }
 
   h1 {
@@ -87,6 +102,7 @@ const GreyColor = "#8E8E8E";
 </style>
 
 <section class="first__section">
+  <img class="test" src="/pexels-gabriel-lorca-691086892-17981965.jpg" alt="">
   <header>
     <a href="">
       <svg
