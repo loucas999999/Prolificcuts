@@ -2,14 +2,27 @@
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import ProlificLogo from "../assets/White-Logo.png";
+import StarsImg from "../assets/pexels-gabriel-lorca-691086892-17981965.jpg";
+
+// css colors
+const WhiteColor = "#FAF9F6";
+const BlackColor = "#000";
+const YellowColor = "#E6C03B";
+const GreyColor = "#8E8E8E";
 ---
 
 <style>
+  /* Bebas Neue */
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+  /* Inter */
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
+
   header {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
   }
+
   svg {
     fill: white;
   }
@@ -18,19 +31,69 @@ import ProlificLogo from "../assets/White-Logo.png";
     max-width: 30%;
     height: auto;
   }
+
+  .first__section {
+    height: 60vh;
+    background: rgb(52, 52, 52);
+    background: linear-gradient(
+      180deg,
+      rgba(52, 52, 52, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    /* background-image: url(/public/pexels-gabriel-lorca-691086892-17981965.jpg);
+    background-position: right center;
+    background-size: cover; */
+  }
+
+  .main__heading {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 0.9;
+    background: -webkit-linear-gradient(#fff, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    color: var(--YellowColor);
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    font-family: "Bebas Neue", sans-serif;
+    border: none;
+    background-color: var(--YellowColor);
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
 </style>
 
 <section class="first__section">
   <header>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      ><path
-        d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"
-      ></path></svg
-    >
+    <a href="">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+          d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"
+        ></path></svg
+      >
+    </a>
     <Image src={ProlificLogo} alt="BarberShops Logo" />
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -42,4 +105,12 @@ import ProlificLogo from "../assets/White-Logo.png";
       ></path></svg
     >
   </header>
+
+  <div class="main__heading">
+    <div class="second-main__heading">
+      <h1>Best Barbershop in ayia napa.</h1>
+      <p>Easily the Best Barber Shop located in Cyprus.</p>
+      <a href=""><button>Book Now</button></a>
+    </div>
+  </div>
 </section>
