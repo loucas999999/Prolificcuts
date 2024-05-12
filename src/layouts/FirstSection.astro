@@ -11,7 +11,7 @@ const YellowColor = "#E6C03B";
 const GreyColor = "#8E8E8E";
 ---
 
-<style>
+<style define:vars={{ WhiteColor, BlackColor, YellowColor, GreyColor }}>
   /* Bebas Neue */
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
   /* Inter */
@@ -46,7 +46,7 @@ const GreyColor = "#8E8E8E";
   }
 
   .main__heading {
-    height: 75vh;
+    height: 60vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -100,17 +100,6 @@ const GreyColor = "#8E8E8E";
     transform: rotate(-3deg) translateY(-30px) translateX(0px);
   }
 
-  .marquee:hover {
-    -webkit-text-stroke: 1.5px #fff;
-    text-stroke: 1.5px #fff;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    color: transparent;
-    transition: all 0.5s ease;
-    -webkit-font-smoothing: antialiased;
-    /*-moz-osx-font-smoothing: grayscale;*/
-  }
-
   .marquee__group {
     flex-shrink: 0;
     display: flex;
@@ -122,7 +111,7 @@ const GreyColor = "#8E8E8E";
   }
 
   .marquee__group span {
-    color: white;
+    color: var(--WhiteColor);
     font-size: 5vw;
     font-weight: 800;
     white-space: nowrap;

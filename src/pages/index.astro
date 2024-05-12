@@ -3,31 +3,27 @@
 import FirstSection from "../layouts/FirstSection.astro";
 import SecondSection from "../layouts/SecondSection.astro";
 
-// global css 
-import '../styles/global.css';
-
-// css colors 
-const WhiteColor = '#FAF9F6';
-const BlackColor = '#000';
-const YellowColor = '#E6C03B';
-const GreyColor = '#8E8E8E';
+// global css
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Prolific Cuts - Ayia Napa</title>
-		<style define:vars={{ WhiteColor, BlackColor, YellowColor, GreyColor }}>
-		body {
-			background-color: var(--BlackColor);
-		}
-		</style>
-	</head>
-	<body>
-		<FirstSection>
-		<SecondSection>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Prolific Cuts - Ayia Napa</title>
+    <style>
+      body {
+        background-color: var(--BlackColor);
+      }
+    </style>
+  </head>
+  <body>
+    <FirstSection>
+    </FirstSection>
+	<SecondSection>
+	</SecondSection>
+  </body>
 </html>
