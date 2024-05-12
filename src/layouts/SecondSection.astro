@@ -1,0 +1,32 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+
+// css colors
+const WhiteColor = "#FAF9F6";
+const BlackColor = "#000";
+const YellowColor = "#E6C03B";
+const GreyColor = "#8E8E8E";
+---
+
+<style>
+  .second__section {
+    background-color: var(--WhiteColor);
+    height: 60vh;
+  }
+
+  h1 {
+    color: var(--BlackColor);
+  }
+
+  h3 {
+    color: var(--GreyColor);
+  }
+</style>
+
+<section class="second__section">
+  <div class="second__section-heading">
+    <h1>INTRODUCING Our Premier Barber Crew</h1>
+    <h3>Prolific Cuts Crew</h3>
+  </div>
+</section>
