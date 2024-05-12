@@ -36,7 +36,7 @@ const GreyColor = "#8E8E8E";
 
   .first__section {
     position: relative;
-    height: 75vh;
+    height: 85vh;
     background: rgb(52, 52, 52);
     background: linear-gradient(
       180deg,
@@ -46,7 +46,7 @@ const GreyColor = "#8E8E8E";
   }
 
   .main__heading {
-    height: 60vh;
+    height: 70vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -94,10 +94,6 @@ const GreyColor = "#8E8E8E";
     height: 10vh;
     user-select: none;
     gap: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    /*background-color: green;*/
-    transform: rotate(-3deg) translateY(-30px) translateX(0px);
   }
 
   .marquee__group {
@@ -107,7 +103,7 @@ const GreyColor = "#8E8E8E";
     justify-content: space-between;
     gap: 2rem;
     min-width: 100%;
-    animation: scroll 15s linear infinite reverse;
+    animation: scroll 15s linear infinite;
   }
 
   .marquee__group span {
@@ -121,10 +117,10 @@ const GreyColor = "#8E8E8E";
 
   @keyframes scroll {
     from {
-      transform: translateX(-100%);
+      transform: translateX(0);
     }
     to {
-      transform: translateX(calc(0 - 2rem));
+      transform: translateX(calc(-100% - 2rem));
     }
   }
 
@@ -184,5 +180,4 @@ const GreyColor = "#8E8E8E";
       <span>You ask for it. We cut it for you.</span>
     </div>
   </div>
-
 </section>
