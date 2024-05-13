@@ -1,15 +1,190 @@
 ---
-
+// css colors
+const WhiteColor = "#FAF9F6";
+const BlackColor = "#000";
+const YellowColor = "#E6C03B";
+const GreyColor = "#8E8E8E";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Document</title>
-    </head>
-    <body>
-        
-    </body>
-</html>
+<style define:vars={{ WhiteColor, BlackColor, YellowColor, GreyColor }}>
+  /* Inter */
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
+
+  footer {
+    background-color: var(--BlackColor);
+  }
+
+  p {
+    color: var(--WhiteColor);
+    font-family: "Inter", sans-serif;
+    padding: 1rem;
+  }
+
+  hr {
+    color: white;
+    margin: 0 1rem;
+  }
+
+  .footer__main-div {
+    font-family: "Inter", sans-serif;
+    color: var(--WhiteColor);
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+   svg {
+    display: block;
+    fill: var(--WhiteColor);
+    transition: transform 0.2s ease-in;
+    transition: transform 0.3s ease;
+  }
+
+  .active svg {
+    transform: rotate(180deg);
+  }
+
+  .list-show {
+    display: none;
+  }
+
+  .list-show.active {
+    display: block;
+  }
+
+  ul {
+    padding: 1rem 0 0.5rem 0;
+    margin: 0 1rem;
+    border-bottom: solid 1px var(--WhiteColor);
+  }
+
+  a {
+    color: var(--GreyColor);
+    text-decoration: none;
+  }
+
+  .footer__bottom-text {
+    font-size: 0.6rem;
+    color: var(--GreyColor);
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .footer__bottom-text p {
+    padding: 0 0 0.5rem 0;
+  }
+
+</style>
+<footer>
+  <div class="footer__text">
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+      sequi nesciunt.
+    </p>
+  </div>
+  <hr />
+  <div class="footer__main-div">
+    <div class="footer__main-company">
+      <ul>
+        <div class="flex">
+          <h3>Testing</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"
+            ></path>
+          </svg>
+        </div>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+      </ul>
+    </div>
+    <div class="footer__main-explore">
+      <ul>
+        <div class="flex">
+          <h3>Testing</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"
+            ></path>
+          </svg>
+        </div>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+      </ul>
+    </div>
+    <div class="footer__main-socials">
+      <ul>
+        <div class="flex">
+          <h3>Testing</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"
+            ></path>
+          </svg>
+        </div>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+        <li class="list-show"><a href="">Testing</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom-text">
+    <p>© 2024 Prolific Cuts, inc. all rights reserved</p>
+    <p>25, Archiepiskopou Makariou III Avenue, Ayia Napa 5343, CY.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll(".flex").forEach(function (flex) {
+    flex.addEventListener("click", function () {
+        // Retrieve the closest parent UL of the clicked .flex
+        const ul = this.closest('ul');
+
+        // Toggle active class on list items within the same UL
+        ul.querySelectorAll(".list-show").forEach(function (li) {
+            li.classList.toggle("active");
+        });
+
+        // The SVG within the clicked .flex element
+        const svg = this.querySelector('svg');
+
+        // Check if any list item is active to determine rotation state
+        if (ul.querySelector(".list-show.active")) {
+            svg.style.transform = "rotate(180deg)";
+        } else {
+            svg.style.transform = "rotate(0deg)";
+        }
+    });
+});
+
+</script>
