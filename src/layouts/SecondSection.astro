@@ -17,6 +17,9 @@ const GreyColor = "#8E8E8E";
   /* Inter */
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
 
+  /* Oregano */
+  @import url("https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap");
+
   .second__section {
     background-color: var(--WhiteColor);
     height: 200vh;
@@ -29,9 +32,11 @@ const GreyColor = "#8E8E8E";
     color: var(--BlackColor);
     text-transform: uppercase;
     line-height: 1;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.5);
   }
 
   h3 {
+    font-family: "Oregano", cursive;
     margin-left: 1rem;
     color: var(--GreyColor);
   }
@@ -55,12 +60,14 @@ const GreyColor = "#8E8E8E";
     max-width: 250px;
     height: auto;
     border-radius: 0.5rem;
+    -webkit-box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.75);
   }
 
   .list2 {
     padding-right: 3rem;
   }
-
 </style>
 
 <section class="second__section">
@@ -71,10 +78,10 @@ const GreyColor = "#8E8E8E";
 
   <div class="main-scrolling__section">
     <div class="scroll-list list1">
-        <Image src={Giannis} alt="giannis koliandris" />
-      </div>
-      <div class="scroll-list list2">
-        <Image src={Theo} alt="theo kattakas" />
-      </div>
+      <Image src={Giannis} alt="giannis koliandris" />
+    </div>
+    <div class="scroll-list list2">
+      <Image src={Theo} alt="theo kattakas" />
+    </div>
   </div>
 </section>
