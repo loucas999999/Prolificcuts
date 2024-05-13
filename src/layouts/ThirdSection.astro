@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+import Photos1 from '../assets/pexels-cottonbro-3993289.jpg';
+import Photos2 from '../assets/pexels-thgusstavo-2809652.jpg';
+
 // css colors
 const WhiteColor = "#FAF9F6";
 const BlackColor = "#000";
@@ -46,8 +50,8 @@ const GreyColor = "#8E8E8E";
   }
 
   .photos {
+    position: relative;
     margin: 2rem auto;
-    min-height: 400px;
     min-width: 280px;
     background-color: #D9D9D9;
     border-radius: 0.5rem;
@@ -55,19 +59,31 @@ const GreyColor = "#8E8E8E";
     flex-direction: column;
     justify-content: end;    
     text-align: right;
-    padding: 0.5rem;
+    padding: 0.1rem;
   }
 
   .photos h1 {
+    position: absolute;
     font-size: 1rem;
-    color: var(--BlackColor);
+    color: white);
     padding: 0;
+    z-index: 999;
   }
 
   .photos p {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
     color: white;
     font-size: 0.5rem;
     padding-left: 2rem;
+    z-index: 999;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+    border-radius: 0.5rem;
   }
 
 </style>
@@ -83,10 +99,12 @@ const GreyColor = "#8E8E8E";
   </div>
   <div class="third__section-photos">
     <div class="photos">
+      <Image src={Photos2} alt="photo2">
       <h1>Activities</h1>
       <p>this isnt just a barbershop. this is a relaxing escape from the ordinary.</p>
     </div>
     <div class="photos">
+      <Image src={Photos1} alt="photo1">
       <h1>Where the magic happens.</h1>
       <p>With Prolific cuts we never judge someones cut, but only deliver the desired cut with excelence.</p>
     </div>
