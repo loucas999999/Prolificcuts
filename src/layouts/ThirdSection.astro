@@ -11,7 +11,7 @@ const GreyColor = "#8E8E8E";
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
 
   .third__section {
-    height: 100vh;
+    height: 150vh;
     background: rgb(32, 32, 32);
     background: linear-gradient(
       180deg,
@@ -44,6 +44,31 @@ const GreyColor = "#8E8E8E";
     font-size: 0.8rem;
   }
 
+  .photos {
+    margin: 2rem auto;
+    height: 400px;
+    width: 280px;
+    background-color: #D9D9D9;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;    
+    text-align: right;
+    padding: 0.5rem;
+  }
+
+  .photos h1 {
+    font-size: 1rem;
+    color: var(--BlackColor);
+    padding: 0;
+  }
+
+  .photos p {
+    color: white;
+    font-size: 0.5rem;
+    padding-left: 2rem;
+  }
+
 </style>
 <section class="third__section">
   <div class="third__section-heading">
@@ -54,5 +79,15 @@ const GreyColor = "#8E8E8E";
       unwind and entertain yourself by challenging your mates to a game on our
       classic pool table.
     </p>
+  </div>
+  <div class="third__section-photos">
+    <div class="photos">
+      <h1>Activities</h1>
+      <p>this isnt just a barbershop. this is a relaxing escape from the ordinary.</p>
+    </div>
+    <div class="photos">
+      <h1>Where the magic happens.</h1>
+      <p>With Prolific cuts we never judge someones cut, but only deliver the desired cut with excelence.</p>
+    </div>
   </div>
 </section>
