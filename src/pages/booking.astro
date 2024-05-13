@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import ProlificLogo from "../assets/White-Logo.png";
+import "../styles/global.css";
+
+// css colors
+const WhiteColor = "#FAF9F6";
+const BlackColor = "#000";
+const YellowColor = "#E6C03B";
+const GreyColor = "#8E8E8E";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Prolific Cuts - Booking</title>
+    <style define:vars={{ WhiteColor, BlackColor, YellowColor, GreyColor }}>
+
+      /* Inter */
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
+
+      body {
+        background-color: var(--BlackColor);
+      }
+
+      img {
+        max-width: 30%;
+        height: auto;
+      }
+
+      svg {
+        fill: white;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+
+      h3 {
+        color: var(--GreyColor);
+      }
+
+      h1 {
+        color: var(--WhiteColor);
+        padding-top: 1rem;
+      }
+
+      .heading__section {
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        padding-top: 3rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="fill: rgb(255, 255, 255);transform: ;msFilter:;"
+          ><path
+            d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"
+          ></path></svg
+        >
+      </a>
+      <Image src={ProlificLogo} alt="BarberShops Logo" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24"
+        viewBox="0 96 960 960"
+        width="24"
+        ><path
+          d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
+        ></path></svg
+      >
+    </header>
+
+    <section class="heading__section">
+      <h3>Make your appointment now</h3>
+      <h1>
+        Experience the convenience of online bookings—seamless scheduling at
+        your fingertips.
+      </h1>
+    </section>
+  </body>
+</html>
