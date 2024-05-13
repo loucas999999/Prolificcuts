@@ -1,0 +1,58 @@
+---
+// css colors
+const WhiteColor = "#FAF9F6";
+const BlackColor = "#000";
+const YellowColor = "#E6C03B";
+const GreyColor = "#8E8E8E";
+---
+
+<style define:vars={{ WhiteColor, BlackColor, YellowColor, GreyColor }}>
+  /* Inter */
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
+
+  .third__section {
+    height: 100vh;
+    background: rgb(32, 32, 32);
+    background: linear-gradient(
+      180deg,
+      rgba(32, 32, 32, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .third__section-heading {
+    padding: 3rem 0.5rem 0;
+  }
+
+  h4 {
+    font-family: "Inter", sans-serif;
+    color: var(--YellowColor);
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-family: "Inter", sans-serif;
+    color: var(--WhiteColor);
+    font-size: 2rem;
+    line-height: 1;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    font-family: "Inter", sans-serif;
+    color: var(--GreyColor);
+    font-size: 0.8rem;
+  }
+
+</style>
+<section class="third__section">
+  <div class="third__section-heading">
+    <h4>No other place like ours</h4>
+    <h1>Booked with a group? no better place than ours.</h1>
+    <p>
+      While your friends are getting their haircuts, take the opportunity to
+      unwind and entertain yourself by challenging your mates to a game on our
+      classic pool table.
+    </p>
+  </div>
+</section>
