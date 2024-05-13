@@ -16,7 +16,6 @@ const GreyColor = "#8E8E8E";
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
   /* Inter */
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
-
   /* Oregano */
   @import url("https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap");
 
@@ -51,6 +50,7 @@ const GreyColor = "#8E8E8E";
   }
 
   .scroll-list {
+    position: relative;
     margin-left: 2rem;
     flex-shrink: 0;
     scroll-snap-align: start;
@@ -63,6 +63,25 @@ const GreyColor = "#8E8E8E";
     -webkit-box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 10px 19px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  h2 {
+    position: absolute;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    top: 1.5rem;
+    left: 1rem;
+    color: var(--WhiteColor);
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.8);
+  }
+
+  h4 {
+    position: absolute;
+    font-family: "Inter", sans-serif;
+    font-size: 0.5rem;
+    top: 1rem;
+    left: 1rem;
+    color: var(--WhiteColor);
   }
 
   .list2 {
@@ -79,9 +98,13 @@ const GreyColor = "#8E8E8E";
   <div class="main-scrolling__section">
     <div class="scroll-list list1">
       <Image src={Giannis} alt="giannis koliandris" />
+      <h4>Main Barber</h4>
+      <h2>Giannis Koliandris</h2>
     </div>
     <div class="scroll-list list2">
       <Image src={Theo} alt="theo kattakas" />
+      <h4>Main Barber</h4>
+      <h2>Theo Kattakas</h2>
     </div>
   </div>
 </section>
