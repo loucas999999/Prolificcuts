@@ -35,10 +35,16 @@ const GreyColor = "#8E8E8E";
   .first__section {
     position: relative;
     height: 85vh;
-    background: rgb(52, 52, 52);
+    /* background: rgb(52, 52, 52);
     background: linear-gradient(
       180deg,
       rgb(80, 80, 80) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ); */
+    background: rgb(28, 28, 28);
+    background: radial-gradient(
+      circle,
+      rgb(55, 55, 55) 0%,
       rgba(0, 0, 0, 1) 100%
     );
   }
@@ -65,6 +71,7 @@ const GreyColor = "#8E8E8E";
     font-family: "Inter", sans-serif;
     text-align: center;
     font-size: 0.8rem;
+    font-weight: 600;
     color: var(--YellowColor);
   }
 
