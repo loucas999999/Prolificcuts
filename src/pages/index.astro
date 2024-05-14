@@ -19,11 +19,15 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>Prolific Cuts - Ayia Napa</title>
     <style>
+      /* Inter */
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
+
       body {
         background-color: var(--BlackColor);
       }
 
       .elfsight-app-d518404f-c731-4508-82ea-17cc61a4267f {
+        font-family: "Inter", sans-serif;
         padding: 1rem;
         background-color: black;
       }
@@ -34,8 +38,15 @@ import "../styles/global.css";
     <FirstSection />
     <SecondSection />
     <ThirdSection />
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    <div class="elfsight-app-d518404f-c731-4508-82ea-17cc61a4267f" data-elfsight-app-lazy></div>
+    <script
+      src="https://static.elfsight.com/platform/platform.js"
+      data-use-service-core
+      defer></script>
+    <div
+      class="elfsight-app-d518404f-c731-4508-82ea-17cc61a4267f"
+      data-elfsight-app-lazy
+    >
+    </div>
     <FourthSection />
     <Footer />
   </body>
