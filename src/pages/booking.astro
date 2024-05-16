@@ -89,8 +89,8 @@ const GreyColor = "#8E8E8E";
     </header>
 
     <section class="heading__section">
-      <h3>Make your appointment now</h3>
-      <h1>
+      <h3 class="hidden">Make your appointment now</h3>
+      <h1 class="hidden">
         Experience the convenience of online bookings—seamless scheduling at
         your fingertips.
       </h1>
@@ -98,3 +98,24 @@ const GreyColor = "#8E8E8E";
     </section>
   </body>
 </html>
+
+<script>
+  // Scroll In Animations
+
+  const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((el) => observer.observe(el));
+
+      const leftElements = document.querySelectorAll(".lefting");
+      leftElements.forEach((el) => observer.observe(el));
+
+      const fadeIn = document.querySelectorAll(".fade__In");
+      fadeIn.forEach((el) => observer.observe(el));
+</script>
