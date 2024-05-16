@@ -20,11 +20,6 @@ const GreyColor = "#8E8E8E";
     padding: 1rem;
   }
 
-  hr {
-    color: white;
-    margin: 0 1rem;
-  }
-
   .footer__main-div {
     font-family: "Inter", sans-serif;
     color: var(--WhiteColor);
@@ -57,9 +52,14 @@ const GreyColor = "#8E8E8E";
   }
 
   ul {
-    padding: 1rem 0 0.5rem 0;
+    padding: 0.5rem 0 0 0;
     margin: 0 1rem;
-    border-bottom: solid 1px var(--WhiteColor);
+    /* border-bottom: solid 1px var(--WhiteColor); */
+  }
+
+  ul li:hover {
+    text-decoration: underline;
+    color: var(--GreyColor);
   }
 
   a {
@@ -85,7 +85,6 @@ const GreyColor = "#8E8E8E";
       It is highly reccomended to carefully read the privacy policies and terms of conditions for every client because it ensures that you're fully informed about how your engaging with our team and services, what rights you retain as a client, and the obligations you're agreeing to.
     </p>
   </div>
-  <hr />
   <div class="footer__main-div">
     <div class="footer__main-company">
       <ul>
