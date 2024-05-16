@@ -39,7 +39,7 @@ import "../styles/global.css";
     </style>
   </head>
   <body>
-    <WebsiteIntro />
+    <!-- <WebsiteIntro /> -->
     <FirstSection />
     <SecondSection />
     <ThirdSection />
@@ -55,3 +55,24 @@ import "../styles/global.css";
     <Footer />
   </body>
 </html>
+
+<script>
+  // Scroll In Animations
+
+  const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((el) => observer.observe(el));
+
+      const leftElements = document.querySelectorAll(".lefting");
+      leftElements.forEach((el) => observer.observe(el));
+
+      const fadeIn = document.querySelectorAll(".fade__In");
+      fadeIn.forEach((el) => observer.observe(el));
+</script>
