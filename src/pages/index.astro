@@ -41,7 +41,7 @@ import "../styles/global.css";
     </style>
   </head>
   <body>
-    <audio id="myAudio" autoplay>
+    <audio id="myAudio" autoplay muted>
         <source src="0516.mp3" type="audio/mpeg">
     </audio>
     <!-- <audio controls>
@@ -86,11 +86,15 @@ import "../styles/global.css";
   fadeIn.forEach((el) => observer.observe(el));
 
   // audio
-  window.addEventListener('load', () => {
+        window.addEventListener('load', () => {
             const audio = document.getElementById('myAudio');
-            audio.play().catch(error => {
+
+            audio.play().then(() => {
+                audio.muted = false; // Unmute after autoplay starts
+            }).catch(error => {
                 console.log('Autoplay was prevented:', error);
-                // Handle autoplay restrictions
+                // Optionally, handle the error or prompt the user to interact
             });
         });
+    </script>
 </script>
