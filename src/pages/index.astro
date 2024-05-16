@@ -35,18 +35,31 @@ import "../styles/global.css";
         flex-wrap: nowrap;
       }
 
-      .iatodp  {
+      .iatodp {
         color: black;
       }
     </style>
   </head>
   <body>
-    <audio controls autoplay src="/public/0516.mp3"></audio>
+    <audio id="myAudio" autoplay>
+        <source src="0516.mp3" type="audio/mpeg">
+    </audio>
+    <!-- <audio controls>
+      <source src="0516.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio> -->
     <FirstSection />
     <SecondSection />
     <ThirdSection />
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    <div class="elfsight-app-9d3bb7f0-d9b1-4876-bf9f-e35066982045" data-elfsight-app-lazy></div>
+    <script
+      src="https://static.elfsight.com/platform/platform.js"
+      data-use-service-core
+      defer></script>
+    <div
+      class="elfsight-app-9d3bb7f0-d9b1-4876-bf9f-e35066982045"
+      data-elfsight-app-lazy
+    >
+    </div>
     <FourthSection />
     <Footer />
   </body>
@@ -56,19 +69,28 @@ import "../styles/global.css";
   // Scroll In Animations
 
   const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach((el) => observer.observe(el));
+
+  const leftElements = document.querySelectorAll(".lefting");
+  leftElements.forEach((el) => observer.observe(el));
+
+  const fadeIn = document.querySelectorAll(".fade__In");
+  fadeIn.forEach((el) => observer.observe(el));
+
+  // audio
+  window.addEventListener('load', () => {
+            const audio = document.getElementById('myAudio');
+            audio.play().catch(error => {
+                console.log('Autoplay was prevented:', error);
+                // Handle autoplay restrictions
+            });
         });
-      });
-
-      const hiddenElements = document.querySelectorAll(".hidden");
-      hiddenElements.forEach((el) => observer.observe(el));
-
-      const leftElements = document.querySelectorAll(".lefting");
-      leftElements.forEach((el) => observer.observe(el));
-
-      const fadeIn = document.querySelectorAll(".fade__In");
-      fadeIn.forEach((el) => observer.observe(el));
 </script>
