@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
 import { Image } from "astro:assets";
-import ProlificLogo from "../assets/White-Logo.png";
-import StarsImg from "../assets/pexels-gabriel-lorca-691086892-17981965.jpg";
+import ProlificLogo from "../assets/Prolific-logo.png";
+import Bandana from "../assets/il_1588xN.2897386211_d1ef.png";
 
 // css colors
 const WhiteColor = "#FAF9F6";
@@ -18,13 +18,22 @@ const GreyColor = "#8E8E8E";
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap");
 
   header {
+    position: fixed;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    background-color: white;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 0 0 20px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
   svg {
-    fill: white;
+    fill: black;
   }
 
   img {
@@ -34,13 +43,14 @@ const GreyColor = "#8E8E8E";
 
   .first__section {
     position: relative;
-    height: 85vh;
-    background: rgb(28, 28, 28);
+    /* background: rgb(28, 28, 28);
     background: radial-gradient(
       circle,
       rgb(55, 55, 55) 0%,
       rgba(0, 0, 0, 1) 100%
-    );
+    ); */
+    background-image: url(../assets/il_1588xN.2897386211_d1ef.png);
+    background-size: cover;
   }
 
   .main__heading {
@@ -55,9 +65,8 @@ const GreyColor = "#8E8E8E";
     font-size: 3rem;
     text-align: center;
     line-height: 0.9;
-    background: -webkit-linear-gradient(#fff, #999999);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: orange;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
   }
 
   p {
@@ -65,7 +74,7 @@ const GreyColor = "#8E8E8E";
     text-align: center;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--YellowColor);
+    color: var(--BlackColor);
   }
 
   button {
@@ -75,7 +84,7 @@ const GreyColor = "#8E8E8E";
     font-size: 1.3rem;
     font-family: "Bebas Neue", sans-serif;
     border: none;
-    background-color: var(--YellowColor);
+    background-color: orange;
     cursor: pointer;
     border-radius: 0.25rem;
     color: var(--WhiteColor);
@@ -90,7 +99,6 @@ const GreyColor = "#8E8E8E";
   .marquee {
     display: flex;
     overflow: hidden;
-    height: 10vh;
     user-select: none;
     gap: 2rem;
   }
@@ -101,15 +109,15 @@ const GreyColor = "#8E8E8E";
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     min-width: 100%;
     animation: scroll 15s linear infinite;
   }
 
   .marquee__group span {
-    color: var(--WhiteColor);
+    color: var(--BlackColor);
     font-size: 5vw;
-    font-weight: 800;
+    font-weight: 900;
     white-space: nowrap;
     font-family: "Syne", sans-serif !important;
     text-transform: uppercase;
@@ -132,6 +140,7 @@ const GreyColor = "#8E8E8E";
 </style>
 
 <section class="first__section">
+  <!-- <Image src={ Bandana } alt="bandana"> -->
   <header>
     <a href="">
       <svg
@@ -159,12 +168,12 @@ const GreyColor = "#8E8E8E";
   <div class="main__heading">
     <div class="second-main__heading">
       <h1>Best Barbershop in ayia napa.</h1>
-      <p>Easily the Best Barber Shop located in Cyprus.</p>
+      <!-- <p>Easily the Best Barber Shop located in Cyprus.</p> -->
       <a href="/booking/"><button>Book Now</button></a>
     </div>
   </div>
 
-  <div class="marquee">
+  <!-- <div class="marquee">
     <div class="marquee__group">
       <span>French crop</span>
       <span>Buzz cut</span>
@@ -179,5 +188,5 @@ const GreyColor = "#8E8E8E";
       <span>Drop fade</span>
       <span>You ask for it. We cut it for you.</span>
     </div>
-  </div>
+  </div> -->
 </section>
