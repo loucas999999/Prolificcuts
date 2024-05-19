@@ -23,15 +23,13 @@ const GreyColor = "#8E8E8E";
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color: white;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 0 0 20px 20px;
-    border: 1px solid rgba(255, 255, 255, 0);
+    background: rgba(121, 121, 121, 0.85);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(121, 121, 121, 0.3);
   }
-
   nav {
     font-family: "Inter", sans-serif;
     display: none;
@@ -39,14 +37,14 @@ const GreyColor = "#8E8E8E";
     position: absolute;
     top: 60px;
     right: 0;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 0 0 20px 20px;
-    border: 1px solid rgba(255, 255, 255, 0);
     width: 100%;
     text-align: left;
+    background: rgba(121, 121, 121, 0.85);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(121, 121, 121, 0.3);
   }
 
   nav ul {
@@ -64,16 +62,22 @@ const GreyColor = "#8E8E8E";
     font-weight: bold;
   }
 
-  .menu-expanded nav {
+  .menu-expanded nav#right-menu {
     display: flex;
+    opacity: 1;
   }
 
-  svg {
+  .menu-expanded-left nav#left-menu {
+    display: flex;
+    opacity: 1;
+  }
+
+  /* svg {
     fill: black;
     height: 100%;
     display: flex;
     align-items: center;
-  }
+  } */
 
   img {
     max-width: 30%;
@@ -100,20 +104,22 @@ const GreyColor = "#8E8E8E";
   }
 
   h1 {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Angel';
     font-size: 3rem;
     text-align: center;
     line-height: 0.9;
-    color: orange;
-    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+    color: white;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
   }
 
   p {
     font-family: "Inter", sans-serif;
     text-align: center;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 900;
     color: var(--BlackColor);
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
   }
 
   button {
@@ -185,16 +191,17 @@ const GreyColor = "#8E8E8E";
 <section class="first__section">
   <!-- <Image src={ Bandana } alt="bandana"> -->
   <header>
-    <a href="">
+    <a href="#" id="menu-toggle-left">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        ><path
-          d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"
-        ></path></svg
       >
+        <path
+          d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"
+        ></path>
+      </svg>
     </a>
     <Image src={ProlificLogo} alt="BarberShops Logo" />
     <a href="#" id="menu-toggle">
@@ -209,12 +216,19 @@ const GreyColor = "#8E8E8E";
         ></path>
       </svg>
     </a>
-    <nav>
+    <nav id="left-menu">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home-left">Theo's Number</a></li>
+        <li><a href="#services-left">Giannis Number</a></li>
+        <li><a href="#about-left">Barbershop's Number</a></li>
+        <li><a href="#contact-left">Maps</a></li>
+      </ul>
+    </nav>
+    <nav id="right-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
     </nav>
     <!-- <a href="#">
@@ -231,7 +245,16 @@ const GreyColor = "#8E8E8E";
 
   <div class="main__heading">
     <div class="second-main__heading">
+      <!-- <svg viewBox="0 0 500 500">
+        <path id="curve" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+        <text width="500">
+          <textPath alignment-baseline="top" xlink:href="#curve">
+            <p>Barbershop In Cyprus</p>
+          </textPath>
+        </text>
+      </svg> -->
       <h1>Best Barbershop in ayia napa.</h1>
+      <p>Barbershop In Cyprus</p>
       <!-- <p>Easily the Best Barber Shop located in Cyprus.</p> -->
       <a href="https://prolificuts.setmore.com"><button>Book Now</button></a>
     </div>
@@ -256,7 +279,15 @@ const GreyColor = "#8E8E8E";
 </section>
 
 <script>
+  // Right svg
   document.getElementById("menu-toggle").addEventListener("click", function () {
     document.querySelector("header").classList.toggle("menu-expanded");
   });
+
+  // Left svg
+  document
+    .getElementById("menu-toggle-left")
+    .addEventListener("click", function () {
+      document.querySelector("header").classList.toggle("menu-expanded-left");
+    });
 </script>
