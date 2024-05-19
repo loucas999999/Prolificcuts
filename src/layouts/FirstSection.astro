@@ -23,13 +23,14 @@ const GreyColor = "#8E8E8E";
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background: rgba(121, 121, 121, 0.85);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.3px);
     -webkit-backdrop-filter: blur(6.3px);
     border: 1px solid rgba(121, 121, 121, 0.3);
   }
+
   nav {
     font-family: "Inter", sans-serif;
     display: none;
@@ -39,10 +40,10 @@ const GreyColor = "#8E8E8E";
     right: 0;
     width: 100%;
     text-align: left;
-    background: rgba(121, 121, 121, 0.85);
+    background: rgba(255, 255, 255, 1);
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.3px);
+    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(6.3px);
     border: 1px solid rgba(121, 121, 121, 0.3);
   }
@@ -54,6 +55,10 @@ const GreyColor = "#8E8E8E";
 
   nav li {
     padding: 1rem;
+  }
+
+  nav li a:hover {
+    color: rgb(180, 180, 180);
   }
 
   nav li a {
@@ -108,7 +113,7 @@ const GreyColor = "#8E8E8E";
     font-size: 3rem;
     text-align: center;
     line-height: 0.9;
-    color: white;
+    color: black;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
   }
 
@@ -119,7 +124,7 @@ const GreyColor = "#8E8E8E";
     font-weight: 900;
     color: var(--BlackColor);
     text-transform: uppercase;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
   }
 
   button {
@@ -129,15 +134,11 @@ const GreyColor = "#8E8E8E";
     font-size: 1.3rem;
     font-family: "Bebas Neue", sans-serif;
     border: none;
-    background-color: orange;
+    background-color: black;
     cursor: pointer;
     border-radius: 0.25rem;
     color: var(--WhiteColor);
     padding: 0.25rem 1rem;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
   }
 
   a {
@@ -253,7 +254,7 @@ const GreyColor = "#8E8E8E";
           </textPath>
         </text>
       </svg> -->
-      <h1>Best Barbershop in ayia napa.</h1>
+      <h1>Best Barbershop in Ayia Napa.</h1>
       <p>Barbershop In Cyprus</p>
       <!-- <p>Easily the Best Barber Shop located in Cyprus.</p> -->
       <a href="https://prolificuts.setmore.com"><button>Book Now</button></a>
