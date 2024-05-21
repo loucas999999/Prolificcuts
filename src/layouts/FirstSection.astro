@@ -2,7 +2,9 @@
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import ProlificLogo from "../assets/Prolific-logo.png";
-import Bandana from "../assets/il_1588xN.2897386211_d1ef.png";
+// import Bandana from "../assets/il_1588xN.2897386211_d1ef.png";
+import CamPic1 from "../assets/A7305188.jpg";
+import CamPic2 from "../assets/A7305192.jpg";
 
 // css colors
 const WhiteColor = "#FAF9F6";
@@ -77,14 +79,7 @@ const GreyColor = "#8E8E8E";
     opacity: 1;
   }
 
-  /* svg {
-    fill: black;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  } */
-
-  img {
+  header img {
     max-width: 30%;
     height: auto;
   }
@@ -97,24 +92,23 @@ const GreyColor = "#8E8E8E";
       rgb(55, 55, 55) 0%,
       rgba(0, 0, 0, 1) 100%
     ); */
-    background-image: url(../assets/il_1588xN.2897386211_d1ef.png);
-    background-size: cover;
+    background-color: black;
   }
 
   .main__heading {
-    height: 80vh;
+    height: 50vh;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: end;
+    padding-bottom: 3rem;
   }
 
   h1 {
-    font-family: 'Angel';
-    font-size: 3rem;
+    font-family: "Angel";
+    font-size: 4rem;
     text-align: center;
     line-height: 0.9;
-    color: black;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    color: var(--WhiteColor);
   }
 
   p {
@@ -122,7 +116,8 @@ const GreyColor = "#8E8E8E";
     text-align: center;
     font-size: 1rem;
     font-weight: 900;
-    color: var(--BlackColor);
+    color: var(--WhiteColor);
+    padding-top: 1rem;
     text-transform: uppercase;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
   }
@@ -134,7 +129,7 @@ const GreyColor = "#8E8E8E";
     font-size: 1.3rem;
     font-family: "Bebas Neue", sans-serif;
     border: none;
-    background-color: black;
+    background-color: darkkhaki;
     cursor: pointer;
     border-radius: 0.25rem;
     color: var(--WhiteColor);
@@ -145,52 +140,41 @@ const GreyColor = "#8E8E8E";
     text-decoration: none;
   }
 
-  /* Text Animation */
   .marquee {
+    /*   overflow: hidden; */
+  }
+
+  .marquee-content {
     display: flex;
-    overflow: hidden;
-    user-select: none;
-    gap: 2rem;
+    animation: scrolling 10s linear infinite;
   }
 
-  .marquee__group {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    min-width: 100%;
-    animation: scroll 15s linear infinite;
+  .marquee-item {
+    flex: 0 0 100%;
+    margin: 0 vw;
+    /*   flex: 0 0 20vw; */
+    /*   margin: 0 2vw; */
   }
 
-  .marquee__group span {
-    color: var(--BlackColor);
-    font-size: 5vw;
-    font-weight: 900;
-    white-space: nowrap;
-    font-family: "Syne", sans-serif !important;
-    text-transform: uppercase;
+  .marquee-item img {
+    aspect-ratio: 3 / 4 ;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
   }
 
-  @keyframes scroll {
-    from {
+  @keyframes scrolling {
+    0% {
       transform: translateX(0);
     }
-    to {
-      transform: translateX(calc(-100% - 2rem));
-    }
-  }
-
-  @media only screen and (min-width: 360px) {
-    .marquee__group span {
-      font-size: 6.5vw;
+    100% {
+      transform: translatex(-144vw);
     }
   }
 </style>
 
 <section class="first__section">
-  <!-- <Image src={ Bandana } alt="bandana"> -->
   <header>
     <a href="#" id="menu-toggle-left">
       <svg
@@ -246,37 +230,46 @@ const GreyColor = "#8E8E8E";
 
   <div class="main__heading">
     <div class="second-main__heading">
-      <!-- <svg viewBox="0 0 500 500">
-        <path id="curve" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
-        <text width="500">
-          <textPath alignment-baseline="top" xlink:href="#curve">
-            <p>Barbershop In Cyprus</p>
-          </textPath>
-        </text>
-      </svg> -->
-      <h1>Best Barbershop in Ayia Napa.</h1>
-      <p>Barbershop In Cyprus</p>
-      <!-- <p>Easily the Best Barber Shop located in Cyprus.</p> -->
+      <h1>Prolific Cuts Barbershop</h1>
+      <p></p>
       <a href="https://prolificuts.setmore.com"><button>Book Now</button></a>
     </div>
   </div>
 
-  <!-- <div class="marquee">
-    <div class="marquee__group">
-      <span>French crop</span>
-      <span>Buzz cut</span>
-      <span>Mullet</span>
-      <span>Drop fade</span>
-      <span>You ask for it. We cut it for you.</span>
+  <div class="marquee">
+    <div class="marquee-content">
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
+      <div class="marquee-item">
+        <Image src={CamPic1} alt="" />
+      </div>
     </div>
-    <div class="marquee__group" aria-hidden="true">
-      <span>French crop</span>
-      <span>Buzz cut</span>
-      <span>Mullet</span>
-      <span>Drop fade</span>
-      <span>You ask for it. We cut it for you.</span>
-    </div>
-  </div> -->
+  </div>
 </section>
 
 <script>
