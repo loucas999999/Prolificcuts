@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import ProlificLogo from "../assets/White-Logo.png";
+
 // css colors
 const WhiteColor = "#FAF9F6";
 const BlackColor = "#000";
@@ -38,6 +41,13 @@ const GreyColor = "#8E8E8E";
     transition: transform 0.3s ease;
   }
 
+  img {
+    max-width: 30%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+
   .active svg {
     transform: rotate(180deg);
   }
@@ -54,7 +64,6 @@ const GreyColor = "#8E8E8E";
   ul {
     padding: 0.5rem 0 0 0;
     margin: 0 1rem;
-    /* border-bottom: solid 1px var(--WhiteColor); */
   }
 
   ul li:hover {
@@ -71,7 +80,7 @@ const GreyColor = "#8E8E8E";
     font-size: 0.6rem;
     color: var(--GreyColor);
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   .footer__bottom-text p {
@@ -81,6 +90,7 @@ const GreyColor = "#8E8E8E";
 </style>
 <footer>
   <div class="footer__main-div">
+    <Image src={ ProlificLogo } alt="Prolific Logo"/>
     <div class="footer__main-company">
       <ul>
         <div class="flex">
