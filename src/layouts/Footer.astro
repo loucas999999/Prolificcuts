@@ -34,7 +34,7 @@ const GreyColor = "#8E8E8E";
     cursor: pointer;
   }
 
-   svg {
+  svg {
     display: block;
     fill: var(--WhiteColor);
     transition: transform 0.2s ease-in;
@@ -87,10 +87,19 @@ const GreyColor = "#8E8E8E";
     padding: 0 0 0.5rem 0;
   }
 
+  .divider-line {
+    height: 1px;
+    background-color: white;
+    opacity: .1;
+  }
+
 </style>
+
+<div class="divider-line"></div>
+
 <footer>
   <div class="footer__main-div">
-    <Image src={ ProlificLogo } alt="Prolific Logo"/>
+    <Image src={ProlificLogo} alt="Prolific Logo" />
     <div class="footer__main-company">
       <ul>
         <div class="flex">
@@ -129,11 +138,19 @@ const GreyColor = "#8E8E8E";
             ></path>
           </svg>
         </div>
-        <li class="list-show"><a href="https://www.instagram.com/prolific.cuts.napa/">Instagram</a></li>
-        <li class="list-show"><a href="https://www.tiktok.com/@young_noy">TikTok</a></li>
+        <li class="list-show">
+          <a href="https://www.instagram.com/prolific.cuts.napa/">Instagram</a>
+        </li>
+        <li class="list-show">
+          <a href="https://www.tiktok.com/@young_noy">TikTok</a>
+        </li>
         <li class="list-show"><a href="">Facebook</a></li>
         <li class="list-show"><a href="">Contact Us</a></li>
-        <li class="list-show"><a href="https://www.google.com/maps/place/Prolific+Cuts/@34.9871111,34.0006052,21z/data=!4m6!3m5!1s0x874f762c79d34371:0xfec0de3f35ff3919!8m2!3d34.9871111!4d34.0006052!16s%2Fg%2F11y3rnz9rx?entry=ttu">Maps</a></li>
+        <li class="list-show">
+          <a
+            href="https://www.google.com/maps/place/Prolific+Cuts/@34.9871111,34.0006052,21z/data=!4m6!3m5!1s0x874f762c79d34371:0xfec0de3f35ff3919!8m2!3d34.9871111!4d34.0006052!16s%2Fg%2F11y3rnz9rx?entry=ttu"
+            >Maps</a>
+        </li>
       </ul>
     </div>
     <div class="footer__main-socials">
@@ -167,24 +184,23 @@ const GreyColor = "#8E8E8E";
 <script>
   document.querySelectorAll(".flex").forEach(function (flex) {
     flex.addEventListener("click", function () {
-        // Retrieve the closest parent UL of the clicked .flex
-        const ul = this.closest('ul');
+      // Retrieve the closest parent UL of the clicked .flex
+      const ul = this.closest("ul");
 
-        // Toggle active class on list items within the same UL
-        ul.querySelectorAll(".list-show").forEach(function (li) {
-            li.classList.toggle("active");
-        });
+      // Toggle active class on list items within the same UL
+      ul.querySelectorAll(".list-show").forEach(function (li) {
+        li.classList.toggle("active");
+      });
 
-        // The SVG within the clicked .flex element
-        const svg = this.querySelector('svg');
+      // The SVG within the clicked .flex element
+      const svg = this.querySelector("svg");
 
-        // Check if any list item is active to determine rotation state
-        if (ul.querySelector(".list-show.active")) {
-            svg.style.transform = "rotate(180deg)";
-        } else {
-            svg.style.transform = "rotate(0deg)";
-        }
+      // Check if any list item is active to determine rotation state
+      if (ul.querySelector(".list-show.active")) {
+        svg.style.transform = "rotate(180deg)";
+      } else {
+        svg.style.transform = "rotate(0deg)";
+      }
     });
-});
-
+  });
 </script>

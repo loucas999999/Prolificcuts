@@ -46,37 +46,13 @@ const GreyColor = "#8E8E8E";
   p {
     font-family: "Inter", sans-serif;
     color: var(--GreyColor);
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .photos {
     position: relative;
     margin: 2rem auto;
-    min-width: 280px;
     border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;    
-    text-align: right;
-    padding: 0.1rem;
-  }
-
-  .photos h1 {
-    position: absolute;
-    font-size: 1rem;
-    color: white);
-    padding: 0;
-    z-index: 999;
-  }
-
-  .photos p {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: white;
-    font-size: 0.5rem;
-    padding-left: 2rem;
-    z-index: 999;
   }
 
   img {
@@ -99,13 +75,5 @@ const GreyColor = "#8E8E8E";
   <div class="third__section-photos hidden">
     <div class="photos">
       <Image src={Photos1} alt="photo2">
-      <h1>Activities</h1>
-      <p>this isnt just a barbershop. this is a relaxing escape from the ordinary.</p>
     </div>
-    <div class="photos">
-      <Image src={Photos2} alt="photo1">
-      <h1>Where the magic happens.</h1>
-      <p>With Prolific cuts we never judge someones cut, but only deliver the desired cut with excelence.</p>
-    </div>
-  </div>
 </section>
