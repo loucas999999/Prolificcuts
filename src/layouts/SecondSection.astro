@@ -21,16 +21,15 @@ const GreyColor = "#8E8E8E";
 
   .second__section {
     background-color: var(--BlackColor);
-    height: 75vh;
   }
 
   h1 {
-    margin-top: 3rem;
     margin-left: 1rem;
     font-family: "Inter", sans-serif;
-    color: var(--BlackColor);
+    color: var(--WhiteColor);
     text-transform: uppercase;
     line-height: 1;
+    max-width: 80%;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   }
 
@@ -73,19 +72,10 @@ const GreyColor = "#8E8E8E";
     position: absolute;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
-    top: 1.5rem;
-    left: 1rem;
-    color: var(--WhiteColor);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
-  }
-
-  h4 {
-    position: absolute;
-    font-family: "Inter", sans-serif;
-    font-size: 0.5rem;
     top: 1rem;
     left: 1rem;
     color: var(--WhiteColor);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
   }
 
   .list2 {
@@ -96,19 +86,17 @@ const GreyColor = "#8E8E8E";
 
 <section class="second__section">
   <div class="second__section-heading">
-    <h1 class="hidden">INTRODUCING Our Premier Barber Crew</h1>
+    <h1 class="hidden">INTRODUCING Our Barber Crew</h1>
     <h3 class="hidden">Prolific Cuts Crew</h3>
   </div>
 
   <div class="main-scrolling__section">
     <div class="scroll-list list1">
       <Image src={Giannis} alt="giannis koliandris" class="hidden" />
-      <h4 class="hidden">Main Barber</h4>
       <h2 class="hidden">Giannis Koliandris</h2>
     </div>
     <div class="scroll-list list2">
       <Image src={Theo} alt="theo kattakas" class="hidden" />
-      <h4 class="hidden">Main Barber</h4>
       <h2 class="hidden">Theo Pittakas</h2>
     </div>
   </div>
