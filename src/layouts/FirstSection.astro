@@ -49,11 +49,10 @@ const GreyColor = "#8E8E8E";
   }
 
   .main__heading {
-    height: 70vh;
+    height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
-    padding-bottom: 3rem;
   }
 
   h1 {
@@ -96,8 +95,7 @@ const GreyColor = "#8E8E8E";
   .marquee__three {
     display: flex;
     overflow: hidden;
-    user-select: none;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .marquee__three img {
@@ -109,9 +107,8 @@ const GreyColor = "#8E8E8E";
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 2rem;
-    min-width: 100%;
-    animation: scroll 30s linear infinite;
+    gap: 1rem;
+    animation: scroll 5s linear infinite;
   }
 
   @keyframes scroll {
@@ -167,13 +164,10 @@ const GreyColor = "#8E8E8E";
       <Image src={CamPic2} alt="Pic2" />
       <Image src={CamPic3} alt="Pic3" />
     </div>
-
-    <div aria-hidden="true" class="marquee__group__three">
-      <div class="marquee__group__three">
-        <Image src={CamPic1} alt="Pic1" />
-        <Image src={CamPic2} alt="Pic2" />
-        <Image src={CamPic3} alt="Pic3" />
-      </div>
+    <div class="marquee__group__three">
+      <Image src={CamPic1} alt="Pic1" />
+      <Image src={CamPic2} alt="Pic2" />
+      <Image src={CamPic3} alt="Pic3" />
     </div>
   </div>
 </section>
