@@ -1,10 +1,11 @@
 ---
 import "../styles/global.css";
 import { Image } from "astro:assets";
-import ProlificLogo from "../assets/Prolific-logo.png";
+import ProlificLogo from "../assets/White-Logo.png";
 // import Bandana from "../assets/il_1588xN.2897386211_d1ef.png";
 import CamPic1 from "../assets/A7305188.jpg";
 import CamPic2 from "../assets/A7305192.jpg";
+import CamPic3 from "../assets/A7305184.jpg";
 
 // css colors
 const WhiteColor = "#FAF9F6";
@@ -25,58 +26,10 @@ const GreyColor = "#8E8E8E";
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.3px);
-    -webkit-backdrop-filter: blur(6.3px);
-    border: 1px solid rgba(121, 121, 121, 0.3);
   }
 
-  nav {
-    font-family: "Inter", sans-serif;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: left;
-    background: rgba(255, 255, 255, 1);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(6.3px);
-    border: 1px solid rgba(121, 121, 121, 0.3);
-  }
-
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  nav li {
-    padding: 1rem;
-  }
-
-  nav li a:hover {
-    color: rgb(180, 180, 180);
-  }
-
-  nav li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-
-  .menu-expanded nav#right-menu {
-    display: flex;
-    opacity: 1;
-  }
-
-  .menu-expanded-left nav#left-menu {
-    display: flex;
-    opacity: 1;
+  svg {
+    fill: white;
   }
 
   header img {
@@ -140,36 +93,34 @@ const GreyColor = "#8E8E8E";
     text-decoration: none;
   }
 
-  .marquee {
-      overflow: hidden;
-  }
-
-  .marquee-content {
+  .marquee__three {
     display: flex;
-    animation: scrolling 10s linear infinite;
+    overflow: hidden;
+    user-select: none;
+    gap: 2rem;
   }
 
-  .marquee-item {
-    flex: 0 0 100%;
-    margin: 0 vw;
-    /*   flex: 0 0 20vw; */
-    /*   margin: 0 2vw; */
-  }
-
-  .marquee-item img {
-    aspect-ratio: 3 / 4 ;
-    display: block;
-    width: 100%;
+  .marquee__three img {
+    max-width: 10%;
     height: auto;
-    padding: 0 10px;
   }
 
-  @keyframes scrolling {
-    0% {
+  .marquee__group__three {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    gap: 2rem;
+    min-width: 100%;
+    animation: scroll 30s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
       transform: translateX(0);
     }
-    100% {
-      transform: translatex(-200vw);
+    to {
+      transform: translateX(-100%);
     }
   }
 </style>
@@ -201,31 +152,6 @@ const GreyColor = "#8E8E8E";
         ></path>
       </svg>
     </a>
-    <nav id="left-menu">
-      <ul>
-        <li><a href="#home-left">Theo's Number</a></li>
-        <li><a href="#services-left">Giannis Number</a></li>
-        <li><a href="#about-left">Barbershop's Number</a></li>
-        <li><a href="#contact-left">Maps</a></li>
-      </ul>
-    </nav>
-    <nav id="right-menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
-    <!-- <a href="#">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="24"
-        viewBox="0 96 960 960"
-        width="24"
-        ><path
-          d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
-        ></path></svg>
-    </a> -->
   </header>
 
   <div class="main__heading">
@@ -236,54 +162,19 @@ const GreyColor = "#8E8E8E";
     </div>
   </div>
 
-  <div class="marquee">
-    <div class="marquee-content">
-      <div class="marquee-item">
-        <Image src={CamPic1} alt="" />
-      </div>
-      <div class="marquee-item">
-        <Image src={CamPic2} alt="" />
-      </div>
-      <div class="marquee-item">
-        <Image src={CamPic1} alt="" />
-      </div>
-      <div class="marquee-item">
-        <Image src={CamPic1} alt="" />
-      </div>
-      <div class="marquee-item">
-        <Image src={CamPic1} alt="" />
-      </div>
+  <div class="marquee__three">
+    <div class="marquee__group__three">
+      <Image src={CamPic1} alt="Pic1" />
+      <Image src={CamPic2} alt="Pic2" />
+      <Image src={CamPic3} alt="Pic3" />
+    </div>
 
-
-      <div class="marquee-item">
-        <Image src={CamPic1} alt="" />
-      </div>
-      <div class="marquee-item">
-        <Image src={CamPic2} alt="" />
-      </div>
-      <div class="marquee-item">
-        <Image src={CamPic1} alt="" />
-      </div>
-      <div class="marquee-item">
-        <Image src={CamPic1} alt="" />
-      </div>
-      <div class="marquee-item">
-        <Image src={CamPic1} alt="" />
+    <div aria-hidden="true" class="marquee__group__three">
+      <div class="marquee__group__three">
+        <Image src={CamPic1} alt="Pic1" />
+        <Image src={CamPic2} alt="Pic2" />
+        <Image src={CamPic3} alt="Pic3" />
       </div>
     </div>
   </div>
 </section>
-
-<script>
-  // Right svg
-  document.getElementById("menu-toggle").addEventListener("click", function () {
-    document.querySelector("header").classList.toggle("menu-expanded");
-  });
-
-  // Left svg
-  document
-    .getElementById("menu-toggle-left")
-    .addEventListener("click", function () {
-      document.querySelector("header").classList.toggle("menu-expanded-left");
-    });
-</script>
